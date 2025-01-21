@@ -22,7 +22,21 @@ Anyone can use this app if they have purchased the accompanying labels and creat
 
 | URL | HTTP Method | Purpose | Request Body | Success Response Code | Authentication/Authorisation |
 | --- | ----------- | ------- | ------------ | --------------------- | ---------------------------- |
-|     |             |         |              |                       |                              |
+|  admin/   |             |         |              |                       |          Must be logged in. Must be admin user.       |
+|  users/   |             |         |              |                       |                              |
+|  api-token-auth/   |             |         |              |                       |                              |
+|  wholefoods/   |      GET       |         |              |                       |                              |
+|  wholefoods/   |      POST       |         |              |                       |                              |
+|  wholefoods/<slug:slug>/   |      GET       |         |              |                       |                              |
+|  wholefoods/feedback/   |      GET       |         |              |                       |                              |
+|  wholefoods/feedback/   |       POST      |         |              |                       |                              |
+|  wholefoods/feedback/<int:pk>/   |      GET       |         |              |                       |                              |
+|  micronutrients/   |      GET       |         |              |                       |                              |
+|  micronutrients/   |       POST      |         |              |                       |                              |
+|  micronutrients/vitamin-a/   |      GET       |    Returns nutrient with name of "Vitamin A"     |              |                       |                              |
+|  micronutrients/feedback/   |      GET       |   Returns all micronutrient feedback      |              |                       |                              |
+|  micronutrients/feedback/   |      POST       |    Creates new micronutrient feedback     |              |                       |                              |
+|  micronutrients/feedback/<int:pk>/   |             |         |              |                       |                              |
 
 ### DB Schema
 ![]( {{ ./relative/path/to/schema/image.png }} )
