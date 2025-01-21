@@ -25,18 +25,18 @@ Anyone can use this app if they have purchased the accompanying labels and creat
 |  admin/   |             |         |              |                       |          Must be logged in. Must be admin user.       |
 |  users/   |             |         |              |                       |                              |
 |  api-token-auth/   |             |         |              |                       |                              |
-|  wholefoods/   |      GET       |         |              |                       |                              |
-|  wholefoods/   |      POST       |         |              |                       |                              |
-|  wholefoods/<slug:slug>/   |      GET       |         |              |                       |                              |
-|  wholefoods/feedback/   |      GET       |         |              |                       |                              |
-|  wholefoods/feedback/   |       POST      |         |              |                       |                              |
-|  wholefoods/feedback/<int:pk>/   |      GET       |         |              |                       |                              |
-|  micronutrients/   |      GET       |         |              |                       |                              |
-|  micronutrients/   |       POST      |         |              |                       |                              |
-|  micronutrients/vitamin-a/   |      GET       |    Returns nutrient with name of "Vitamin A"     |              |                       |                              |
-|  micronutrients/feedback/   |      GET       |   Returns all micronutrient feedback      |              |                       |                              |
-|  micronutrients/feedback/   |      POST       |    Creates new micronutrient feedback     |              |                       |                              |
-|  micronutrients/feedback/<int:pk>/   |             |         |              |                       |                              |
+|  wholefoods/   |      GET       |    Returns all wholefoods     |      N/A        |            200           |                Must be logged in.              |
+|  wholefoods/   |      POST       |    Create new wholefood object    |      Wholefood Object        |        201               |            Must be logged in. Must be admin.                  |
+|  wholefoods/almonds/   |      GET       |    Returns wholefood with slug of "almonds"     |       N/A       |            200           |               Must be logged in.               |
+|  wholefoods/feedback/   |      GET       |    Returns all wholefoods     |       N/A       |             200          |               Must be logged in.               |
+|  wholefoods/feedback/   |       POST      |    Create a new wholefood feedback       |      WholefoodFeedback object        |          201             |              Must be logged in. Must be practitioner user.                |
+|  wholefoods/feedback/1/   |      GET       |        Returns a wholefood feedback object with ID of "1".    |      N/A        |            200           |               Must be logged in. Must be feedback owner or admin.               |
+|  micronutrients/   |      GET       |     Returns all micronutrients    |       N/A       |            200           |             Must be logged in.                 |
+|  micronutrients/   |       POST      |    Create new micronutrient object      |       Micronutrient Object       |          201             |                  Must be logged in. Must be admin.            |
+|  micronutrients/vitamin-a/   |      GET       |    Returns nutrient with slug of "vitamin-a"     |      N/A       |         200              |               Must be logged in.               |
+|  micronutrients/feedback/   |      GET       |   Returns all micronutrient feedback      |       N/A       |       200                |             Must be logged in. Must be admin user.                 |
+|  micronutrients/feedback/   |      POST       |    Create a new micronutrient feedback     |       MicronutrientFeedback object       |       201               |             Must be logged in. Must be practitioner or admin user.                  |
+|  micronutrients/feedback/1/   |      GET       |    Returns a micronutrient feedback object with ID of "1".    |       N/A       |           200            |              Must be logged in. Must be feedback owner or admin.                |
 
 ### DB Schema
 ![]( {{ ./relative/path/to/schema/image.png }} )
